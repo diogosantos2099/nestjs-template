@@ -7,5 +7,5 @@ interface Config {
 dotenv.config();
 
 export const config: Config = {
-  port: parseInt(process.env.HOST_PORT!, 10),
+  port: parseInt(process.env.HOST_PORT, 10),
 };

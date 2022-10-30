@@ -17,7 +17,8 @@ export class AppController {
     type: ExampleEntity,
   })
   @Get(':id')
-  async get(@Param('id', new ParseIntPipe()) id: number
+  async get(
+    @Param('id', new ParseIntPipe()) id: number,
   ): Promise<ExampleEntity> {
     return await this.appService.get(id);
   }
