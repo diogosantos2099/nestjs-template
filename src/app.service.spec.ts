@@ -1,5 +1,6 @@
 import { Test } from "@nestjs/testing";
 import { AppService } from "./app.service";
+import { ExampleEntity } from "./entities/example.entity";
 
 describe('AppService', () => {
     let appService: AppService;
@@ -14,9 +15,11 @@ describe('AppService', () => {
 
     describe('get', () => {
         it('should resolve successfully', async () => {
-          const result = await appService.get();
+          const id: number = 1;
+          const expected: ExampleEntity = { id, value: 'some value' }
+          const result = await appService.get(id);
     
-          expect(result).toEqual('Hello World!');
+          expect(result).toEqual(expected);
         });
       });
 });
