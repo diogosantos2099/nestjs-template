@@ -8,6 +8,11 @@ import { ExampleEntity } from './entities/example.entity';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  /**
+   * /example/{id} (GET)
+   * @param id The id of the ExampleEntity
+   * @returns ExampleEntity model
+   */
   @ApiOperation({
     summary: 'Asynchronously fetch an object by its identifier.',
   })

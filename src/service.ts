@@ -11,9 +11,7 @@ export class Service {
   constructor(
     public readonly app: NestFastifyApplication,
     public readonly document: OpenAPIObject,
-  ) {
-    SwaggerModule.setup('swagger', app, document);
-  }
+  ) {}
 
   /**
    * Configures and creates the service.
@@ -34,6 +32,7 @@ export class Service {
       .addBearerAuth()
       .build();
     const document = SwaggerModule.createDocument(app, options);
+    SwaggerModule.setup('swagger', app, document);
 
     return new Service(app, document);
   }
