@@ -16,6 +16,9 @@ export class AppController {
     description: 'Success',
     type: ExampleEntity,
   })
+  @ApiResponse({ status: 400, description: 'Bad Request' })
+  @ApiResponse({ status: 404, description: 'Not Found' })
+  @ApiResponse({ status: 500, description: 'Internal Server Error' })
   @Get(':id')
   async get(
     @Param('id', new ParseIntPipe()) id: number,
