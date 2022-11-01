@@ -43,6 +43,7 @@ $ npm install
 ```
 
 ## Running the app
+Via terminal:
 
 ```bash
 # development
@@ -54,18 +55,29 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+Via VSCode Run and Debug: choose "Run npm start".
 
-## Test
+## Useful commands
+
+### Prettier and Lint
+```bash
+# Prettier
+$ npm run format
+
+# Lint
+$ npm run lint
+```
+### Test
 
 ```bash
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
+
+# e2e tests
+$ npm run test:e2e
 ```
 
 ## Support
