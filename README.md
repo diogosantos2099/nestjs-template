@@ -26,15 +26,26 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. 
 
-Features:
-- MVC architecture
-- [Fastify](https://docs.nestjs.com/techniques/performance) Http Provider
-- Asynchronous methods
-- Swagger UI
+Dependencies:
+- [@nestjs/platform-fastify](https://docs.nestjs.com/techniques/performance)
+- [@nestjs/swagger](https://docs.nestjs.com/openapi/introduction)
+- [dotenv](https://www.dotenv.org/)
 
 ### Swagger
 
 http://localhost:8080/swagger (port is defined on `.env` file)
+
+### Dockerfile
+
+Open a terminal in the root directory, where the `Dockerfile` is:
+
+```bash
+# Build docker image
+$ docker build . -t nestjs-template
+
+# Start container (host port : container port)
+$ docker run -d -p 8080:8080 -t nestjs-template
+```
 
 ## Installation
 
@@ -43,7 +54,6 @@ $ npm install
 ```
 
 ## Running the app
-Via terminal:
 
 ```bash
 # development
@@ -55,25 +65,26 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-Via VSCode Run and Debug: choose "Run npm start".
 
 ## Useful commands
 
-### Prettier and Lint
 ```bash
+# Transpile the TypeScript files
+$ npm run build
+
 # Prettier
 $ npm run format
 
 # Lint
 $ npm run lint
 ```
-### Test
+## Test
 
 ```bash
 # unit tests
 $ npm run test
 
-# test coverage
+# unit tests coverage
 $ npm run test:cov
 
 # e2e tests
