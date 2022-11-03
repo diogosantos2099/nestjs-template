@@ -15,7 +15,8 @@ export class Service {
 
   /**
    * Configures and creates the service.
-   * @returns The created service
+   * Adds swagger.
+   * @returns The service
    */
   public static async create(): Promise<Service> {
     const app = await NestFactory.create<NestFastifyApplication>(
@@ -38,7 +39,8 @@ export class Service {
   }
 
   /**
-   * Start the service
+   * Start the service.
+   * Specify '0.0.0.0' to listen on all available IPv4 interfaces
    */
   public async start(): Promise<void> {
     await this.app.listen(config.port, '0.0.0.0');
