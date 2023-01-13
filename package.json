@@ -28,7 +28,7 @@
     "@nestjs/swagger": "^6.1.4",
     "dotenv": "^16.0.3",
     "reflect-metadata": "^0.1.13",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.0.4",
     "rxjs": "^7.8.0"
   },
   "devDependencies": {
